@@ -1,1 +1,8 @@
 AddKeysToAgent  yes
+
+
+host *
+  CheckHostIP no
+  ServerAliveInterval 20 
+  ServerAliveCountMax 3
+  TCPKeepAlive no 
