@@ -13,14 +13,17 @@ set wildmenu
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
-nnoremap zz :update<cr>
-nnoremap zx :wq!<cr>
-inoremap zz <Esc>:update<cr>gi
+nnoremap zs :update<cr>         " Update the file without quitting
+inoremap zs <Esc>:update<cr>gi  " Update the file in insert mode
+nnoremap zz :wq!<cr>            " Write the file annd quit
+nnoremap zx :q!<cr>             " Quit the file without saving
 
-nnoremap <Leader>b   :buffers<CR>
-nnoremap <Leader>r   :registers<CR>
+nnoremap <Leader>b   :buffers<CR>           " Show the buffers
+nnoremap <Leader>r   :registers<CR>         " Show the registers
+nnoremap <Leader>t   :vertical terminal<CR> " Open a terminal vertically
 nnoremap <Leader>l   :list!
 
+" Toggle the cursor column
 nnoremap <silent> <Leader>cc :set   cursorcolumn!<CR>
 
 colorscheme evening
@@ -38,3 +41,4 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
