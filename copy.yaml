@@ -1,0 +1,30 @@
+---
+- name: Copy dotfiles to their location 
+  hosts: localhost
+  connection: local 
+  gather_facts: no
+
+  tasks:
+
+  - name: Copy dotfiles to their disk location 
+    ansible.builtin.copy:
+      src: "{{ item.git_name }}" 
+      dest: "{{ item.disk_location | expanduser }}" 
+      force: yes 
+    loop: "{{ dotfiles }}"
+
+  # - stat: path=bashrc
+  #   register: stat
+
+  # - stat: path=~/.bashrc
+  #   register: stat2
+
+  # - debug: var=stat2
+  # - debug: var=stat
+
+  # - debug: var=inventory_dir
+
+  # - name: Copy bashrc2 
+  #   ansible.builtin.copy:
+  #     src: bashrc 
+  #     dest: /home/michael/.bashrc2 

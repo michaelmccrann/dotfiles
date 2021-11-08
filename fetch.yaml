@@ -1,0 +1,12 @@
+---
+- name: Fetch dotfiles from their location 
+  hosts: localhost
+  connection: local 
+
+  tasks:
+
+  - name: Fetch dotfiles from their disk location 
+    ansible.builtin.copy:
+      src: "{{ item.disk_location }}" 
+      dest: "{{ item.git_name }}" 
+    loop: "{{ dotfiles }}"

@@ -1,0 +1,4 @@
+dotfiles:
+  - { git_name: bashrc,       disk_location: ~/.bashrc }
+  - { git_name: ssh_config,   disk_location: ~/.ssh/config }
+  - { git_name: vimrc,        disk_location: ~/.vimrc } 
