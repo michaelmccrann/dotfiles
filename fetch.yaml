@@ -8,5 +8,5 @@
   - name: Fetch dotfiles from their disk location 
     ansible.builtin.copy:
       src: "{{ item.disk_location }}" 
-      dest: "{{ item.git_name }}" 
+      dest: "files/{{ item.git_name }}" 
     loop: "{{ dotfiles }}"
