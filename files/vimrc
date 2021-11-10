@@ -1,46 +1,64 @@
 set number
 set syntax=on
 
+set textwidth=100	    " Line wrap (number of cols)
+set showmatch	    " Highlight matching brace
+set visualbell	    " Use visual bell (no beeping)
+ 
+set hlsearch	    " Highlight all search results
+set smartcase	    " Enable smart-case search
+set ignorecase	    " Always case-insensitive
+set incsearch	    " Searches for strings incrementally
+ 
+set autoindent	    " Auto-indent new lines
+set expandtab	    " Use spaces instead of tabs
+set shiftwidth=2	    " Number of auto-indent spaces
+set smartindent	    " Enable smart-indent
+set smarttab	    " Enable smart-tabs
+set softtabstop=2	    " Number of spaces per Tab
 set tabstop=2
-set softtabstop=2
-set expandtab
-set autoindent
-
 set mouse=a
 set cursorline
+colorscheme evening        " Set the colorscheme
 
+"" Advanced
+set ruler	" Show row and column ruler information
+set undolevels=1000	" Number of undo levels
+set backspace=indent,eol,start	" Backspace behaviour
+ 
 set wildmenu
-set incsearch                                         " search as characters are entered
-set hlsearch                                          " highlight matches
-
 set clipboard=unnamed                                 " Set unamed register to be clipboard register
 
-
-nnoremap zs :update<cr>         " Update the file without quitting
-inoremap zs <Esc>:update<cr>gi  " Update the file in insert mode
-nnoremap zz :wq!<cr>            " Write the file annd quit
-nnoremap zx :q!<cr>             " Quit the file without saving
-
-nnoremap <Leader>b   :buffers<CR>
-           " Show the buffers
-nnoremap <Leader>r   :registers<CR>
-" Show the registers
-nnoremap <Leader>t   :vertical terminal<CR> " Open a terminal vertically
-nnoremap <Leader>l   :list!
-
-nnoremap <silent> <Leader>cc :set   cursorcolumn!<CR> " Toggle the cursor column
- 
-
-colorscheme evening               " Set the colorscheme
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowb
 set noswapfile
 
+
+"""""""""""""""""""""""
+" Key mapping
+"""""""""""""""""""""""
+nnoremap zs :update<cr>         " Update the file without quitting
+inoremap zs <Esc>:update<cr>gi  " Update the file in insert mode
+nnoremap zz :wq!<cr>            " Write the file annd quit
+nnoremap zx :q!<cr>             " Quit the file without saving
+
+" Show the buffers
+nnoremap <Leader>b   :buffers<CR>
+
+" Show the registers           
+nnoremap <Leader>r   :registers<CR>
+
+" Open a terminal vertically
+nnoremap <Leader>t   :vertical terminal<CR> 
+
+" list
+nnoremap <Leader>l   :list!
+
+" Toggle the cursor column
+nnoremap <silent> <Leader>cc :set   cursorcolumn!<CR> 
+ 
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
