@@ -31,5 +31,15 @@ unset rc
 set -o vi
 EDITOR=vi
 
+HISTSIZE= 
+HISTFILESIZE=
+
 alias g='git'
 alias gs='git status'
+alias gsbsb='git status -s -b'
+
+#PROMPT_COMMAND='echo -en "\033]0;$USER@$(hostname | cut -d'.' -f1)\a"'
+#source ~/py3.venv/bin/activate
+
+
+
