@@ -1,1 +1,9 @@
 AddKeysToAgent  yes
+
+Host github
+    HostName github.com
+    IdentityFile ~/.ssh/github.pub
+
+Host gitlab
+    HostName gitlab.com
+    IdentityFile ~/.ssh/gitlab.pub
