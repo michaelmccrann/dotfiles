@@ -3,5 +3,6 @@ dotfiles:
   - { git_name: ssh_config,   disk_location: ~/.ssh/config }
   - { git_name: vimrc,        disk_location: ~/.vimrc } 
   - { git_name: tmux.conf,     disk_location: ~/.tmux.conf } 
+  - { git_name: gitconfig,     disk_location: ~/.gitconfig } 
 
 
